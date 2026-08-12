@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Required permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_MEDIA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BloodBankSystem"
+        tools:targetApi="31">
+        <activity
+            android:name=".BloodBankResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RateUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CampDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BloodCampListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchbloodbankActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInventoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CampRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BloodConsentActivity"
+            android:exported="false" /> <!-- Activities -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCt9Pczy8X_D_84LsjDhnMy74BzqGe1Q_I" />
+
+        <activity
+            android:name=".BloodBankDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DonorListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchBloodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".donorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".donorregisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".contactus_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".aboutus_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".newbbActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bbdataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DonationCertificateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BloodBankActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UserActivity"
+            android:exported="true" />
+        <activity
+            android:name=".loginactivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:banner="@drawable/banner_img"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

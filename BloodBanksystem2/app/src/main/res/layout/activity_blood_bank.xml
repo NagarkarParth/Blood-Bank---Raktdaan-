@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Blood Bank System Header -->
+    <RelativeLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#B71C1C"
+        android:elevation="8dp"
+        android:padding="10dp">
+
+        <!-- Blood Bank Logo -->
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Blood Bank Logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/newlogo" />
+
+        <!-- Blood Bank System Title -->
+        <TextView
+            android:id="@+id/tv_blood_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Blood Bank System"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/main2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal">
+
+            <!-- Login Form Title -->
+            <TextView
+                android:id="@+id/tv_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Register Blood Bank"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Blood Bank Name -->
+            <EditText
+                android:id="@+id/et_blood_bank_name"
+                style="@style/CustomEditText"
+                android:hint="Blood Bank Name" />
+
+            <!-- Contact Person Name -->
+            <EditText
+                android:id="@+id/et_contact_person"
+                style="@style/CustomEditText"
+                android:hint="Contact Person Name" />
+
+            <!-- Phone Number -->
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/CustomEditText"
+                android:hint="Phone Number"
+                android:inputType="phone" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/CustomEditText"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/CustomEditText"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Address -->
+            <EditText
+                android:id="@+id/et_address"
+                style="@style/CustomEditText"
+                android:hint="Address"
+                android:inputType="textMultiLine" />
+
+            <!-- Register Button -->
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#B71C1C"
+                android:text="Register Blood Bank"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <!-- Skip Text Centered -->
+            <TextView
+                android:id="@+id/skiptext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Skip"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

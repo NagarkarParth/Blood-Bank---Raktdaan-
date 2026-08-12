@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- About Us Header -->
+        <TextView
+            android:id="@+id/tv_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:background="#B71C1C"
+            android:padding="12dp"
+            android:elevation="4dp" />
+
+        <!-- About Us Content -->
+        <TextView
+            android:id="@+id/tv_about_us_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:text="Blood denation and tranfusion service in an indispensable part of contemporary zaedicine and health care. Blood management has been recognized as a challenging task because of life threatening asture of blood products entails the practilious administration due to its perishable astire &amp; required timely processing and it also saves the life. Sach great challenge has been considerably alleviated with the development of information and computer technology. e-Blood Bank is an integrated blood bank auteciation system. This web based mechanism inter connects all the Blood Banks of the State into a single serworic. Integrated Blood Bank MIS refers the acquisition, validation, storage and circulation of variom live data and information electronically regarding blood donation and transfusion service. Such system is able to assemble heterogeneous data into legible reports to support decision making from effective donor screening to optimal blood distemination in the field. Those electronic processes will help the public for easy access to the blood availability status of blood banks on finger tips: so that he can place a requisition of a particular blood group in anssby blood hank (Especially rare groups) save a valuable life. "
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:lineSpacingExtra="4dp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</ScrollView>

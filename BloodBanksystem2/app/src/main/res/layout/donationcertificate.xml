@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FF0000"
+    android:padding="20dp">
+
+    <!-- Blood Bank System Header (Fixed at Top) -->
+    <RelativeLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#B71C1C"
+        android:elevation="8dp"
+        android:padding="10dp">
+
+        <!-- Blood Bank Logo at Top Left -->
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Blood Bank Logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/newlogo" />
+
+        <!-- Blood Bank System Title (Centered) -->
+        <TextView
+            android:id="@+id/tv_blood_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Blood Bank System"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Content Scrollable (Ensures Header Stays at the Top) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/certificateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:elevation="5dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/blood_bank_logo"
+                android:layout_gravity="center"
+                android:contentDescription="Blood Donation Logo"/>
+
+            <!-- Certificate Title -->
+            <TextView
+                android:id="@+id/tvCertificateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Donation Certificate"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FF0000"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"/>
+
+            <!-- Certificate Body -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This certificate is proudly presented to"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"/>
+
+            <!-- Donor Name (Editable) -->
+            <EditText
+                android:id="@+id/etDonorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Donor Name"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FF0000"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="10dp" />
+
+            <!-- Certificate Message -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For their generous contribution in saving lives through blood donation."
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"/>
+
+            <!-- Donation Date (Editable) -->
+            <EditText
+                android:id="@+id/etDonationDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Date (DD-MM-YYYY)"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="10dp" />
+
+            <!-- Signature Area -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingTop="20dp">
+
+                <!-- Signature Placeholder -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Authorized Signature"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:paddingEnd="40dp"/>
+
+                <!-- Stamp Placeholder -->
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/signature"
+                    android:contentDescription="Official Stamp"/>
+            </LinearLayout>
+
+            <!-- Download Button -->
+            <Button
+                android:id="@+id/btnDownloadPDF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download Certificate"
+                android:padding="10dp"
+                android:backgroundTint="#FF0000"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

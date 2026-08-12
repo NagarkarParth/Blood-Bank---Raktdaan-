@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:gravity="center_horizontal"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#B71C1C"
+        android:elevation="8dp"
+        android:padding="10dp">
+
+        <!-- Blood Bank Logo -->
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:contentDescription="Blood Bank Logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/newlogo" />
+
+        <!-- Blood Bank System Title -->
+        <TextView
+            android:id="@+id/tv_blood_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/iv_logo"
+            android:text="         Raktdaan "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Blood Group"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Blood Group Category: A -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blood Group A"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:paddingBottom="8dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonA1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="A+"
+            android:backgroundTint="#D32F2F"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/buttonA2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="A-"
+            android:backgroundTint="#D32F2F"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Blood Group Category: B -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blood Group B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonB1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="B+"
+            android:backgroundTint="#D32F2F"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/buttonB2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="B-"
+            android:backgroundTint="#D32F2F"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Blood Group Category: AB -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blood Group AB"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonAB1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="AB+"
+            android:backgroundTint="#D32F2F"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/buttonAB2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="AB-"
+            android:backgroundTint="#D32F2F"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Blood Group Category: O -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blood Group O"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonO1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="O+"
+            android:backgroundTint="#D32F2F"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/buttonO2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="O-"
+            android:backgroundTint="#D32F2F"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:backgroundTint="#D32F2F"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"/>
+
+</LinearLayout>

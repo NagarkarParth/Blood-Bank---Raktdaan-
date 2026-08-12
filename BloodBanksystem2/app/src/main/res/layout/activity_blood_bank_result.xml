@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"> <!-- Set background color if needed -->
+
+    <!-- Header Bar -->
+    <RelativeLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#B71C1C"
+        android:elevation="8dp">
+
+        <!-- Blood Bank Logo -->
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:contentDescription="Blood Bank Logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/newlogo" />
+
+        <!-- Blood Bank System Title -->
+        <TextView
+            android:id="@+id/tv_blood_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_logo"
+            android:layout_marginStart="16dp"
+            android:text="Blood Bank System"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Scrollable Results Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txt_result1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading results..."
+            android:textSize="16sp"
+            android:textColor="#ffffff" />
+    </ScrollView>
+
+</LinearLayout>

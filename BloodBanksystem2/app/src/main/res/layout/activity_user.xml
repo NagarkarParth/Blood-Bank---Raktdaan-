@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UserActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#B71C1C"
+        android:elevation="8dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_sidebar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:contentDescription="Sidebar Menu"
+            android:src="@drawable/baseline_moreoption"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_blood_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Blood Bank System"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="Blood Bank Logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/newlogo" />
+    </RelativeLayout>
+
+    <!-- About Us -->
+    <TextView
+        android:id="@+id/tv_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_bar"
+        android:layout_margin="16dp"
+        android:text="About Us"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="#B71C1C"
+        android:padding="10dp" />
+
+    <!-- Contact Us -->
+    <TextView
+        android:id="@+id/tv_contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_about_us"
+        android:layout_margin="13dp"
+        android:background="#B71C1C"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Contact Us"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Animation -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimation"
+        android:layout_width="400dp"
+        android:layout_height="414dp"
+        android:layout_below="@id/tv_contact_us"
+        android:layout_marginTop="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/blood_donation" />
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/task_bar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:background="#B71C1C">
+
+        <Button
+            android:id="@+id/btn_blood_bank"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Blood Bank"
+            android:textSize="8sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button_black"
+            android:drawableTop="@drawable/blood_bank"
+            android:drawablePadding="0dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btn_blood_donor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Blood Donor"
+            android:textSize="8sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button_black"
+            android:drawableTop="@drawable/blood_donation"
+            android:drawablePadding="0dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btn_consent_form"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Consent Form"
+            android:textSize="8sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button_black"
+            android:drawableTop="@drawable/informed_consent"
+            android:drawablePadding="0dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btn_blood_camp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Blood Camp"
+            android:textSize="8sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button_black"
+            android:drawableTop="@drawable/refugee_camp"
+            android:drawablePadding="0dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Sidebar Overlay -->
+    <RelativeLayout
+        android:id="@+id/sidebar_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <!-- Sidebar Menu -->
+    <LinearLayout
+        android:id="@+id/sidebar_menu"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:paddingBottom="10dp" />
+
+        <Button
+            android:id="@+id/sidebar_certificate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Certificate"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#B71C1C"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/certificate" />
+
+        <Button
+            android:id="@+id/sidebar_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#B71C1C"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/info" />
+
+        <Button
+            android:id="@+id/sidebar_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#B71C1C"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/contact_mail" />
+
+        <Button
+            android:id="@+id/sidebar_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#B71C1C"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/share" />
+
+        <Button
+            android:id="@+id/sidebar_help_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Help Us"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#B71C1C"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/question" />
+
+        <Button
+            android:id="@+id/sidebar_rate_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rate Us"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#B71C1C"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/rate" />
+
+        <Button
+            android:id="@+id/sidebar_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#B71C1C"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/logout" />
+    </LinearLayout>
+
+</RelativeLayout>

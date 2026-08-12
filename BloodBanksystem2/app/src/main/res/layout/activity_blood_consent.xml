@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/blood_bank_logo"
+            android:contentDescription="Blood Bank Logo"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Consent Form"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Personal Information -->
+        <EditText
+            android:id="@+id/et_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/et_blood_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Blood Group"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:minHeight="48dp" />
+
+        <!-- Donated Before -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have you donated before?"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_donated_previously"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textColor="@android:color/black"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@android:color/black"/>
+        </RadioGroup>
+
+        <!-- Discomfort After Donation -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any discomfort after donation?"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_discomfort_after_donation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textColor="@android:color/black"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@android:color/black"/>
+        </RadioGroup>
+
+        <!-- Health Issues -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have you experienced any of these symptoms?"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cb_weight_loss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unexpected Weight Loss"
+                android:textColor="@android:color/black"/>
+
+            <CheckBox
+                android:id="@+id/cb_diarrhea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeated Diarrhea"
+                android:textColor="@android:color/black"/>
+
+            <CheckBox
+                android:id="@+id/cb_swollen_glands"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Swollen Glands"
+                android:textColor="@android:color/black"/>
+
+            <CheckBox
+                android:id="@+id/cb_low_fever"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continuous Low Fever"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <!-- Diseases -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do you suffer from any of the following diseases?"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cb_heart_disease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heart Disease"
+                android:textColor="@android:color/black"/>
+
+            <CheckBox
+                android:id="@+id/cb_cancer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancer"
+                android:textColor="@android:color/black"/>
+
+            <CheckBox
+                android:id="@+id/cb_diabetes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diabetes"
+                android:textColor="@android:color/black"/>
+
+            <CheckBox
+                android:id="@+id/cb_hepatitis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hepatitis B/C"
+                android:textColor="@android:color/black"/>
+
+            <CheckBox
+                android:id="@+id/cb_epilepsy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Epilepsy"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+        <!-- Donor Consent -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Consent Agreement:"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <CheckBox
+            android:id="@+id/cb_donor_consent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I hereby give my consent to donate blood at my own responsibility."
+            android:textColor="@android:color/black"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:backgroundTint="#D32F2F"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
